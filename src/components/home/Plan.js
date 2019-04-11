@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zoom } from 'react-reveal';
+import { Fade } from 'react-reveal';
 import {
   faMapMarkedAlt,
   faHotel,
@@ -47,7 +47,7 @@ const Plan = () => {
         <div className="row">
           {cards.map((card, i) => {
             return (
-              <Zoom bottom key={i} delay={i * 100}>
+              <Fade bottom key={i} delay={i * 100}>
                 <div className="col-md-4">
                   <IconCard
                     icon={card.icon}
@@ -57,7 +57,7 @@ const Plan = () => {
                     link={card.link}
                   />
                 </div>
-              </Zoom>
+              </Fade>
             );
           })}
         </div>

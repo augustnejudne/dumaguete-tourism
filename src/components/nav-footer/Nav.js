@@ -20,7 +20,7 @@ const Nav = () => {
   return (
     <nav className="navbar navbar-expand-md navbar-light">
       <div className="container">
-        <Link to="/" className="navbar-brand">
+        <Link to="/" className={`navbar-brand ${window.location.pathname !== '/' ? 'text-danger' : null}`}>
           <span className="baloo-bold" style={{ fontSize: '1.5rem' }}>
             Dumaguete
           </span>

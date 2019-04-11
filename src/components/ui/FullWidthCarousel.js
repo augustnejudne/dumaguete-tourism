@@ -95,20 +95,22 @@ const FullWidthCarousel = ({ slides, height }) => {
         })}
       </div>
 
-      <a
+      <button
         href="#my-carousel"
         data-slide="prev"
         className="carousel-control-prev"
+        style={{background: 'transparent', border: 'none'}}
       >
         <span className="carousel-control-prev-icon" />
-      </a>
-      <a
+      </button>
+      <button
         href="#my-carousel"
         data-slide="next"
         className="carousel-control-next"
+        style={{background: 'transparent', border: 'none'}}
       >
         <span className="carousel-control-next-icon" />
-      </a>
+      </button>
     </div>
   );
 };

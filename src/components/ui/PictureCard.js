@@ -8,7 +8,7 @@ const PictureCard = ({ img, title, description, background }) => {
       <Link
         to="/"
         className="card mb-3 d-none d-md-block shadow-on-hover"
-        style={{ border: 'none', background: background }}
+        style={{ border: 'none', background: background, overflow: 'hidden' }}
       >
         <div
           style={{
@@ -30,18 +30,14 @@ const PictureCard = ({ img, title, description, background }) => {
       <Link
         to="/"
         className="card mb-2 d-md-none"
-        style={{ border: 'none', background: background }}
+        style={{ border: 'none', background: background, overflow: 'hidden' }}
       >
         <div className="row no-gutters">
           <div
             className="col-5 d-flex align-items-center"
             style={{ overflow: 'hidden' }}
           >
-            <img
-              src={img}
-              alt={title}
-              style={{ height: '100%', width: 'auto' }}
-            />
+            <div style={{height: '100%', width: '100%', background: `url(${img})`, backgroundSize: 'cover'}} />
           </div>
           <div className="col-7 pl-3">
             <h5 className="card-title pt-3">{title}</h5>

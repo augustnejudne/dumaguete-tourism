@@ -1,5 +1,5 @@
 import React from 'react';
-import { Zoom } from 'react-reveal'
+import { Fade } from 'react-reveal'
 import PictureCard from '../ui/PictureCard';
 import apo from '../../assets/img/popular/apo.jpg';
 import forestCamp from '../../assets/img/popular/forestCamp.jpg';
@@ -36,11 +36,11 @@ const cards = [
 const renderCards = () => {
   return cards.map((card, i) => {
     return (
-      <Zoom key={i} bottom delay={i*100}>
+      <Fade key={i} bottom delay={i*100}>
         <div className="col-md-6 col-lg-3">
           <PictureCard img={card.img} title={card.title} description={card.description} background={'#eee'} />
         </div>
-      </Zoom>
+      </Fade>
     )
   })
 }
