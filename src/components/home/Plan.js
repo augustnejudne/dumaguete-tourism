@@ -47,7 +47,7 @@ const Plan = () => {
         <div className="row">
           {cards.map((card, i) => {
             return (
-              <Zoom bottom key={i} delay={i * 100} fraction={0.5}>
+              <Zoom bottom key={i} delay={i * 100}>
                 <div className="col-md-4">
                   <IconCard
                     icon={card.icon}

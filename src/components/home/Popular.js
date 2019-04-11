@@ -9,8 +9,7 @@ import pulangBato from '../../assets/img/popular/pulangBato.jpg';
 const cards = [
   {
     img: apo,
-    alt: 'apo',
-    title: 'Mount Apo',
+    title: 'Apo Island',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, distinctio ex placeat totam dicta fugit eius nostrum sequi facere quia.',
   },
@@ -37,7 +36,7 @@ const cards = [
 const renderCards = () => {
   return cards.map((card, i) => {
     return (
-      <Zoom key={i} bottom delay={i*100} fraction={0.5}>
+      <Zoom key={i} bottom delay={i*100}>
         <div className="col-md-6 col-lg-3">
           <PictureCard img={card.img} title={card.title} description={card.description} background={'#eee'} />
         </div>

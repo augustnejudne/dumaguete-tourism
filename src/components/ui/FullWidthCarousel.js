@@ -24,17 +24,25 @@ const CarouselItem = ({
         height: '100%',
         background: `url(${image})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center center',
+        backgroundPosition: 'top center',
       }}
     >
       <div className="container">
         <div className="carousel-caption d-none d-sm-block text-right mb-5">
-          <h1 className="display-3">{heading}</h1>
+          <h1
+            className="display-3"
+            style={{
+              textShadow: '0 2px 5px #000',
+            }}
+          >
+            {heading}
+          </h1>
           <p
             className="lead"
             style={{
               padding: '5px 20px',
               display: 'inline-block',
+              fontWeight: '700',
               textShadow: '0 2px 5px #000',
             }}
           >
@@ -71,7 +79,7 @@ const FullWidthCarousel = ({ slides, height }) => {
           );
         })}
       </ol>
-      <div className="carousel-inner" style={{height: height}}>
+      <div className="carousel-inner" style={{ height: height }}>
         {slides.map((slide, i) => {
           return (
             <CarouselItem

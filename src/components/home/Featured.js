@@ -44,7 +44,7 @@ const Featured = () => {
 
   return (
     <section id="showcase">
-      <FullWidthCarousel slides={slides} height='80vh' />
+      <FullWidthCarousel slides={slides} height='85vh' />
     </section>
   );
 };
