@@ -1,4 +1,5 @@
 import React from 'react';
+import { Zoom } from 'react-reveal';
 import {
   faMapMarkedAlt,
   faHotel,
@@ -40,21 +41,23 @@ const cards = [
 
 const Plan = () => {
   return (
-    <section id="plan" className="py-5" style={{background: '#f5f5f5'}}>
+    <section id="plan" className="py-5" style={{ background: '#f5f5f5' }}>
       <div className="container">
         <h2 className="text-center test">Plan Your Dumaguete Trip</h2>
         <div className="row">
           {cards.map((card, i) => {
             return (
-              <div className="col-md-4" key={i}>
-                <IconCard
-                  icon={card.icon}
-                  color={card.color}
-                  title={card.title}
-                  description={card.description}
-                  link={card.link}
-                />
-              </div>
+              <Zoom bottom key={i} delay={i * 100} fraction={0.5}>
+                <div className="col-md-4">
+                  <IconCard
+                    icon={card.icon}
+                    color={card.color}
+                    title={card.title}
+                    description={card.description}
+                    link={card.link}
+                  />
+                </div>
+              </Zoom>
             );
           })}
         </div>
