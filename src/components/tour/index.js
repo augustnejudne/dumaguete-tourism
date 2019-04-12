@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../../HOC/Layout';
 import PageHeader from '../ui/PageHeader';
-import ParallaxFeature from '../ui/ParallaxFeature';
+import ParallaxCard from '../ui/ParallaxCard';
 
 import boulevard from '../../assets/img/boulevard.jpg';
 import cathedral from '../../assets/img/cathedral.jpg';
@@ -67,11 +67,12 @@ const index = () => {
   const renderTouristSpots = () => {
     return touristSpots.map(({ img, title, description }, i) => {
       return (
-        <ParallaxFeature
+        <ParallaxCard
           key={i}
           img={img}
           title={title}
           description={description}
+          index={i}
         />
       );
     });

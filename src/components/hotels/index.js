@@ -3,6 +3,7 @@ import { Fade } from 'react-reveal';
 import Layout from '../../HOC/Layout';
 import PageHeader from '../ui/PageHeader';
 import HotelCard from '../ui/HotelCard';
+import bethel from '../../assets/img/hotels/bethel.jpg';
 import bayViewInn from '../../assets/img/hotels/c-and-l-bay-view-inn.jpg';
 import nicanor from '../../assets/img/hotels/hotel-nicanor.jpg';
 import palwa from '../../assets/img/hotels/hotel-palwa.jpg';
@@ -14,6 +15,11 @@ const hotels = [
     title: 'Hotel Palwa',
     description:
       'Hotel Palwa is proud of its hospitable environment, they want their guests to feel the Filipino hospitality and they are doing a great job. It is very affordable and has 38 spacious, newly refurbished comfortable rooms. The hotel is located in the central district, making it convenient for the visitors of the Dumaguete City.',
+  },
+  {
+    img: bethel,
+    title: 'Bethel Guest House',
+    description: 'A Christian operated hotel, located along Rizal Boulevard Dumaguete City, the capital of Negros Oriental which is famous for its ambiance and gentle people. It is only an hour and fifteen minutes flight from the country’s capital of Manila. Bethel Guest House is a fifteen-minute drive from the airport and three minutes away from the seaport. Located at the heart of the city, the hotel is within walking distance from business establishments, universities, churches, parks, theaters, tourist spots, and other entertainment centers'
   },
   {
     img: obdulia,
@@ -39,7 +45,7 @@ const renderHotels = () => {
   return hotels.map(({ img, title, description }, i) => {
     return (
       <Fade key={i}>
-        <HotelCard img={img} title={title} description={description} />
+        <HotelCard img={img} title={title} description={description}/>
       </Fade>
     );
   });

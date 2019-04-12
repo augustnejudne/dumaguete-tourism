@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-const ParallaxFeature = ({ img, title, description }) => {
+const ParallaxCard = ({ img, title, description, index }) => {
   const bgOverlay = '#00000044';
   return (
     <Fragment>
@@ -18,7 +18,7 @@ const ParallaxFeature = ({ img, title, description }) => {
         className="d-flex justify-content-center align-items-center"
       >
         <div
-        className="bg-white"
+          className={index === 0 ? 'bg-danger' : 'bg-light'}
           style={{
             clipPath: 'polygon(50% 100%, 0 0, 100% 0)',
             height: '15px',
@@ -29,17 +29,17 @@ const ParallaxFeature = ({ img, title, description }) => {
             left: '50%',
           }}
         />
-        <h3 className="bg-light text-center d-inline-block py-1 px-3">{title}</h3>
+        <h3 className="bg-light text-center d-inline-block py-1 px-3">
+          {title}
+        </h3>
       </div>
       <div className="py-5 bg-light">
-        <div style={{width: '70%', margin: '0 auto'}}>
-            <p>
-              {description}
-            </p>
+        <div style={{ width: '70%', margin: '0 auto' }}>
+          <p>{description}</p>
         </div>
       </div>
     </Fragment>
   );
 };
 
-export default ParallaxFeature;
+export default ParallaxCard;
