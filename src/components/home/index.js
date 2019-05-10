@@ -11,7 +11,7 @@ const Home = () => {
     <Layout>
       <Featured />
       <div className="container-fluid bg-danger text-center text-white py-3">
-        <h3 className="baloo-bold">
+        <h3 className="baloo-bold dumaguete-fiesta">
           #DumagueteFiesta2019
         </h3>
       </div>

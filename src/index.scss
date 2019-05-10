@@ -84,3 +84,9 @@ Color Theme Swatches in Hex
 -4-yellow1 { color: #F2CC0C; }
 -5-yellow2 { color: #F2B90C; }
 */
+
+@media screen and (max-width: 512px) {
+  .dumaguete-fiesta {
+    font-size: 1.3rem;
+  }
+}
